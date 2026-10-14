@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1b2550">
+<title>3학년 현장체험학습 일정</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap">
+<style>
+:root{
+  --navy:#1b2550;--ind:#4f46e5;--ind-soft:#eef0ff;
+  --bg:#f3f4f9;--ink:#181b2c;--sub:#6b7089;--line:#e3e5ef;
+  --ok:#16a34a;--red:#dc2626;
+  --S:#ea580c;--S-soft:#fff1e8;--A:#0284c7;--A-soft:#e6f4fc;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;font-size:15px;line-height:1.45;-webkit-text-size-adjust:100%;word-break:keep-all}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
+.hidden{display:none!important}
+
+header{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff;padding:calc(12px + env(safe-area-inset-top)) 16px 12px}
+.hrow{display:flex;align-items:center;gap:8px}
+.htitle{font-weight:800;font-size:17px;letter-spacing:-.2px}
+.dd{margin-left:auto;font-family:Outfit;font-weight:700;font-size:13px;background:#fff;color:var(--navy);padding:4px 10px;border-radius:99px}
+.chips{display:flex;gap:6px;margin-top:8px}
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:13px;color:#dfe3fb;background:rgba(255,255,255,.12);padding:5px 11px;border-radius:99px;font-weight:600}
+.chip svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2.4}
+.chip.S{background:rgba(234,88,12,.28);color:#ffd9c2}
+.chip.A{background:rgba(2,132,199,.3);color:#cdeefe}
+
+main{padding:14px 14px 28px;max-width:640px;margin:0 auto}
+
+.now{background:linear-gradient(135deg,var(--navy),var(--ind));color:#fff;border-radius:18px;padding:16px;margin-bottom:14px}
+.now .lb{font-size:12px;opacity:.8;font-weight:600}
+.now .tn{font-size:20px;font-weight:800;margin-top:2px;letter-spacing:-.3px}
+.now .cd{font-size:13px;opacity:.85;margin-top:4px}
+.now .nxt{margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,.2);font-size:14px;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.now .nxt span{font-size:11.5px;font-weight:700;background:rgba(255,255,255,.18);padding:2px 7px;border-radius:6px}
+.now .nxt b{font-family:Outfit}
+.now .nxt em{font-style:normal;margin-left:auto;font-size:12.5px;font-weight:700;background:#fff;color:var(--navy);padding:2px 8px;border-radius:99px}
+
+.bus{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;background:#fff;border-radius:16px;padding:12px;margin-bottom:14px}
+.bus .h{grid-column:1/-1;font-size:13px;font-weight:800;margin-bottom:2px}
+.bus .h small{color:var(--sub);font-weight:600;margin-left:4px}
+.bus div.c{background:#f5f6fb;border-radius:10px;padding:7px 4px;text-align:center}
+.bus .c b{display:block;font-family:Outfit;font-size:16px;font-weight:800;color:var(--navy)}
+.bus .c span{font-size:10.5px;color:var(--sub);font-weight:600}
+
+.ti{display:flex;gap:12px;position:relative;padding-bottom:12px}
+.ti:before{content:'';position:absolute;left:58px;top:22px;bottom:-2px;width:2px;background:var(--line)}
+.ti:last-child:before{display:none}
+.ti .tm{width:46px;flex:none;text-align:right;font-family:Outfit;font-weight:700;font-size:14px;color:var(--sub);padding-top:11px}
+.ti .dot{position:absolute;left:53px;top:15px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid #b9bdd3}
+.ti.g .dot{border-color:var(--ind);background:var(--ind)}
+.ti.past .tb{opacity:.5}
+.ti.cur .dot{background:var(--ok);border-color:var(--ok);box-shadow:0 0 0 4px rgba(22,163,74,.2)}
+.ti.cur .tb{outline:2px solid var(--ok)}
+.tb{margin-left:20px;flex:1;background:#fff;border-radius:14px;padding:10px 13px;box-shadow:0 1px 2px rgba(20,24,60,.05)}
+.ti.g .tb{background:var(--ind-soft)}
+.ti.g .tn{color:#3730a3}
+.tb .tn{font-weight:700}
+.tb .td{font-size:13px;color:var(--sub);margin-top:2px}
+.tb ol,.tb ul{margin:6px 0 0;padding-left:18px;font-size:13.5px}
+.tb li{margin:2px 0}
+.tag{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:var(--red);border-radius:5px;padding:1px 6px;margin-right:5px;vertical-align:1px}
+.gtag{display:inline-block;font-size:11px;font-weight:800;color:var(--ind);background:#fff;border-radius:5px;padding:1px 6px;margin-top:6px}
+.spots{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+.spots span{font-size:12.5px;font-weight:600;background:#f4f5fa;border-radius:7px;padding:3px 8px}
+.spots i{font-style:normal;font-family:Outfit;font-weight:800;color:var(--red);margin-right:3px}
+.vtb.S{background:var(--S-soft)} .vtb.S .tn{color:var(--S)}
+.vtb.A{background:var(--A-soft)} .vtb.A .tn{color:var(--A)}
+.tabs{display:flex;background:#e9eaf3;border-radius:12px;padding:3px;gap:3px;margin-bottom:14px}
+.tabs button{flex:1;padding:9px 6px;border-radius:9px;font-weight:700;font-size:14.5px;color:var(--sub)}
+.tabs button.on{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:0 1px 2px rgba(20,24,60,.05)}
+.card h3{margin:0 0 10px;font-size:16px;font-weight:800}
+.steps{counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{counter-increment:s;position:relative;padding:3px 0 10px 36px}
+.steps li:before{content:counter(s);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:50%;background:var(--ind);color:#fff;font-family:Outfit;font-weight:700;display:grid;place-items:center;font-size:13px}
+.steps li b{display:block}
+.steps li span{color:var(--sub);font-size:13px}
+.mapimg{width:100%;min-height:120px;border-radius:12px;display:block;background:#eef0f6;cursor:zoom-in;margin-top:4px}
+.mapph{height:120px;border-radius:12px;background:#f1f2f8;display:grid;place-items:center;color:var(--sub);font-weight:700;font-size:14px}
+.memo{font-size:12.5px;color:var(--sub);margin:7px 0 0;text-align:center}
+.sp4{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.sp4 div{display:flex;gap:9px;align-items:flex-start;background:#f6f7fb;border-radius:12px;padding:10px}
+.sp4 b{font-size:14.5px}
+.sp4 small{display:block;color:var(--sub);font-size:12px;line-height:1.35;margin-top:2px}
+.sn{flex:none;width:22px;height:22px;border-radius:50%;background:var(--red);color:#fff;font-family:Outfit;font-weight:700;font-size:12.5px;display:grid;place-items:center}
+.hl{background:var(--ind-soft);border-radius:12px;padding:12px;font-weight:700;color:#3730a3}
+.muted{color:var(--sub);font-size:13px}
+.zoom{position:fixed;inset:0;z-index:70;background:#0d1024;display:flex;flex-direction:column}
+.zoom .zs{flex:1;overflow:auto;display:flex;align-items:center}
+.zoom img{width:100%;display:block;margin:auto}
+.zoom.big .zs{align-items:flex-start}
+.zoom.big img{width:250%;max-width:none}
+.zoom .zx{position:absolute;top:calc(10px + env(safe-area-inset-top));right:12px;z-index:2;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font-size:18px}
+.zoom .zh{color:#aab0d0;font-size:12.5px;text-align:center;margin:0;padding:10px 0 calc(12px + env(safe-area-inset-bottom))}
+.foot{text-align:center;color:var(--sub);font-size:12.5px;margin-top:6px}
+
+.modal{position:fixed;inset:0;z-index:50;background:rgba(15,18,40,.55);display:flex;align-items:flex-end;justify-content:center}
+.sheet{background:#fff;width:100%;max-width:640px;border-radius:20px 20px 0 0;padding:20px 16px calc(18px + env(safe-area-inset-bottom));max-height:90vh;overflow:auto}
+.sheet h3{margin:0 0 4px;font-size:19px}
+.sheet h4{margin:18px 0 8px;font-size:14px;color:var(--sub)}
+.cg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.pick{border:1.5px solid var(--line);border-radius:12px;padding:10px 4px;text-align:center}
+.pick b{display:block;font-family:Outfit;font-size:21px}
+.pick small{font-size:11px;color:var(--sub)}
+.pick.on{border-color:var(--ind);background:var(--ind-soft)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ag .pick{padding:14px 6px}
+.ag .pick b{font-family:inherit;font-size:16px}
+.ag .pick.S.on{border-color:var(--S);background:var(--S-soft);color:var(--S)}
+.ag .pick.A.on{border-color:var(--A);background:var(--A-soft);color:var(--A)}
+.go{display:block;width:100%;margin-top:18px;background:var(--ind);color:#fff;font-weight:800;padding:14px;border-radius:12px;font-size:16px}
+.go:disabled{opacity:.35}
+</style>
+</head>
+<body>
+<header id="hd"></header>
+<main id="main"></main>
+<div id="modal" class="modal hidden"></div>
+
+<script>
+const TRIP = '2026-10-15';
+const DEPS = [['08:20','08:25','08:30'],['10:00','10:05','10:10'],['11:20','11:25','11:30'],['15:50','15:55','16:00']];
+const depsFor = c => { const g = c <= 3 ? 0 : c <= 5 ? 1 : 2; return DEPS.map(d => d[g]); };
+const VEN = { S:'스포츠몬스터', A:'엑스포 아쿠아리움' };
+
+const LS = {
+  get(k, d){ try { const v = localStorage.getItem('fts_' + k); return v == null ? d : JSON.parse(v); } catch(e){ return d; } },
+  set(k, v){ try { localStorage.setItem('fts_' + k, JSON.stringify(v)); } catch(e){} }
+};
+const $ = s => document.querySelector(s);
+const pad = n => ('0' + n).slice(-2);
+const nowHM = () => { const d = new Date(); return pad(d.getHours()) + ':' + pad(d.getMinutes()); };
+const toMin = hm => { const [h, m] = hm.split(':').map(Number); return h * 60 + m; };
+
+let CLS = Number(LS.get('cls', 0));
+let ACT = LS.get('act', '');
+let TAB = LS.get('tab', 'sch'); if (TAB !== 'mis') TAB = 'sch';
+const GONGSAN_MAP = 'gongsan.jpg';   // index.html과 같은 폴더에 올린 안내도
+const GONGSAN_MAP_DRIVE = 'https://lh3.googleusercontent.com/d/1Ra4kW6ySR8lSfroj6d4A1Z21vns06fZA=w1600';  // 없으면 드라이브
+const SPOTS = [['금서루','공산성의 대표적인 성문 모습'],['임류각지','백제 왕궁 관련 유적지'],['백제 왕궁추정지','웅진백제 왕성이 있었던 자리'],['쌍수정','정자와 주변 풍경이 함께 보이는 장소']];
+
+function renderMis(){
+  return `<section class="card"><h3>공산성 · 교과서에 실렸으면 하는 장소</h3>
+    <ol class="steps">
+      <li><b>학급 단체 사진</b><span>공산성을 배경으로 반 전체가 함께 찍어요.</span></li>
+      <li><b>팀별 미션 사진 1장</b><span>발야구 팀별로 아래 4곳 중 한 곳을 골라, 교과서에 실렸으면 하는 모습으로 찍어요.</span></li>
+      <li><b>자유 견학</b><span>한 장 찍으면 그다음부터는 자유 시간! 10:00까지 매표소 앞으로 모여요.</span></li>
+    </ol>
+    <img class="mapimg" src="${GONGSAN_MAP}" alt="공산성 추천 코스 안내도" data-zoom="1" referrerpolicy="no-referrer"
+      onerror="if(!this.dataset.f){this.dataset.f=1;this.src=GONGSAN_MAP_DRIVE}else{this.outerHTML='<div class=&quot;mapph&quot;>안내도를 불러오지 못했어요</div>'}">
+    <p class="memo">안내도를 누르면 크게 볼 수 있어요</p>
+    <div class="sp4">${SPOTS.map((p, i) => `<div><span class="sn">${i + 1}</span><span><b>${p[0]}</b><small>${p[1]}</small></span></div>`).join('')}</div>
+    <p class="muted" style="margin:12px 0 0">📸 미션 사진은 1장만! · 정해진 코스로 함께 이동해요 · 반별 상품이 있어요 🎁</p>
+  </section>
+  <section class="card"><h3>국립공주박물관 · 백제 문화 바로 알기</h3>
+    <div class="hl">📱 웅진백제관 입구에 있는 QR코드를 찍고 「백제 문화 바로 알기」 문제를 풀어요.</div>
+    <p class="muted" style="margin:10px 0 0">반별 상품이 있어요 🎁 · 11:10까지 박물관 입구로 모여요.</p>
+  </section>
+  <section class="card"><h3>하루 종일 · 사진 많이 찍기</h3>
+    <div class="hl">📷 친구들과 함께 사진을 많이 찍어요! 졸업앨범에 들어갈 수 있어요.</div>
+    <p class="muted" style="margin:10px 0 0">어디서든 좋아요 · 반별 상품이 있어요 🎁<br>아쿠아리움에서는 플래시를 꺼 주세요.</p>
+  </section>`;
+}
+function openZoom(src){
+  const z = document.createElement('div'); z.className = 'zoom';
+  z.innerHTML = `<button class="zx" aria-label="닫기">✕</button><div class="zs"><img src="${src}" alt="" referrerpolicy="no-referrer"></div><p class="zh">사진을 누르면 확대 / 축소</p>`;
+  z.addEventListener('click', e => { if (e.target.closest('.zx')) z.remove(); else if (e.target.tagName === 'IMG') z.classList.toggle('big'); });
+  document.body.appendChild(z);
+}
+
+function dday(){
+  const t = new Date(); const a = new Date(TRIP + 'T00:00:00');
+  const b = new Date(t.getFullYear() + '-' + pad(t.getMonth() + 1) + '-' + pad(t.getDate()) + 'T00:00:00');
+  const n = Math.round((a - b) / 86400000);
+  return n > 0 ? 'D-' + n : n === 0 ? 'D-DAY' : '끝!';
+}
+
+/* 일정: t는 시각(지금/다음 계산용), show는 화면에 보이는 시각 */
+function schedule(){
+  const d = depsFor(CLS), bus = CLS + '호차';
+  const items = [
+    { t:'08:00', g:1, title:'본부교회 주차장 집결', desc:'출석 확인 후 ' + bus + ' 탑승 · 멀미약은 미리 먹고 오기' },
+    { t:d[0], title:bus + ' 출발 → 공산성', desc:'내리기 전에 안전교육을 해요' },
+    { t:'09:00', title:'공산성', html:`<ol><li>공산성을 배경으로 학급 단체 사진</li><li>발야구 팀별 미션 사진 <b>1장</b></li><li>사진을 찍고 나면 자유 견학</li></ol>
+        <div class="td" style="margin-top:6px"><span class="tag">미션</span>교과서에 실렸으면 하는 장소에서 찍기 · 4곳 중 1곳</div>
+        <div class="spots"><span><i>1</i>금서루</span><span><i>2</i>임류각지</span><span><i>3</i>백제 왕궁추정지</span><span><i>4</i>쌍수정</span></div>` },
+    { t:'10:00', g:1, title:'공산성 매표소 앞 학급별 집결' },
+    { t:d[1], title:bus + ' 출발 → 국립공주박물관' },
+    { t:'10:20', title:'국립공주박물관', html:`<div class="td"><span class="tag">미션</span>웅진백제관 입구 QR코드로 「백제 문화 바로 알기」 문제 풀기</div><div class="td">학급별 사진 촬영 · 자유 견학</div>` },
+    { t:'11:10', g:1, title:'박물관 입구 학급별 집결' },
+    { t:d[2], title:bus + ' 출발 → 대전 신세계 백화점' },
+    { t:'12:00', title:'점심 식사', desc:'지하 1층 또는 지상 6층 식당 · 13:30까지' },
+  ];
+  if (ACT === 'S') items.push(
+    { t:'13:30', g:1, v:'S', title:'스포츠몬스터 입구 반별 집결', desc:'입구에서 학년 전체 사진을 찍어요' },
+    { t:'13:40', v:'S', title:'스포츠몬스터 체험', desc:'안전장치 꼭 잠그기 · 직원 안내 따르기' },
+    { t:'15:30', g:1, title:'스포츠몬스터 출구 학급별 집결', desc:'선생님과 함께 지상 1층 버스 승하차 구역으로 이동' });
+  else if (ACT === 'A') items.push(
+    { t:'13:30', g:1, v:'A', title:'엑스포 아쿠아리움 입구 반별 집결' },
+    { t:'14:10', v:'A', title:'서커스 공연' },
+    { t:'14:30', v:'A', title:'수중 발레 공연', desc:'공연이 끝나면 학년 전체 사진을 찍어요' },
+    { t:'14:50', show:'공연 후', v:'A', title:'아쿠아리움 관람', desc:'VR 체험 포함 · 동물 사진은 플래시 끄고' },
+    { t:'15:30', g:1, title:'아쿠아리움 출구 학급별 집결', desc:'선생님과 함께 지상 1층 버스 승하차 구역으로 이동' });
+  items.push(
+    { t:d[3], title:bus + ' 백화점 출발', desc:'지상 1층 도로 버스 승하차 구역' },
+    { t:'16:40', show:'도착', title:'본부교회 주차장 도착 · 하교', desc:'두고 내린 물건 확인 · 주변 쓰레기 정리 · 귀가 시 교통안전' });
+  return items;
+}
+
+function render(){
+  $('#hd').innerHTML = `<div class="hrow"><div class="htitle">3학년 현장체험학습</div><span class="dd">${dday()}</span></div>
+    <div class="chips">
+      <button class="chip" data-open="1">${CLS ? `3학년 ${CLS}반 · ${CLS}호차` : '반 선택'}<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button class="chip ${ACT}" data-open="1">${ACT ? VEN[ACT] : '선택활동'}<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+    </div>`;
+  if (!CLS || !ACT) { $('#main').innerHTML = ''; return; }
+  const tabs = `<div class="tabs"><button data-tab="sch" class="${TAB === 'sch' ? 'on' : ''}">일정</button><button data-tab="mis" class="${TAB === 'mis' ? 'on' : ''}">미션</button></div>`;
+  if (TAB === 'mis') { if (!$('#main .mapimg') || !$('#main .sp4')) $('#main').innerHTML = tabs + renderMis(); return; }
+
+  const items = schedule(), n = nowHM();
+  let ci = -1; items.forEach((it, i) => { if (it.t <= n) ci = i; });
+  const cur = ci > -1 ? items[ci] : null, nx = items[ci + 1];
+  const left = nx ? toMin(nx.t) - toMin(n) : 0;
+  const leftTxt = left >= 60 ? Math.floor(left / 60) + '시간 ' + (left % 60 ? left % 60 + '분 ' : '') + '남음' : left + '분 남음';
+  const showT = it => it.show || it.t;
+
+  const d = depsFor(CLS);
+  $('#main').innerHTML = tabs + `
+    <div class="now">
+      ${cur ? `<div class="lb">지금 · ${showT(cur)}${cur.show ? '' : '~'}</div><div class="tn">${cur.title}</div>${cur.desc ? `<div class="cd">${cur.desc}</div>` : ''}`
+            : `<div class="lb">아직 시작 전</div><div class="tn">10월 15일 (목) · 공주·대전</div><div class="cd">08:00까지 본부교회 주차장으로 와요</div>`}
+      <div class="nxt">${nx ? `<span>다음</span><b>${showT(nx)}</b> ${nx.title}${nx.show ? '' : `<em>${leftTxt}</em>`}` : `<span>끝</span>오늘 일정이 모두 끝났어요. 조심히 집에 가요!`}</div>
+    </div>
+    <div class="bus"><div class="h">우리 반 버스 출발 시각<small>${CLS}호차</small></div>
+      <div class="c"><b>${d[0]}</b><span>→ 공산성</span></div><div class="c"><b>${d[1]}</b><span>→ 박물관</span></div>
+      <div class="c"><b>${d[2]}</b><span>→ 백화점</span></div><div class="c"><b>${d[3]}</b><span>→ 학교</span></div></div>
+    <div>${items.map((it, i) => `
+      <div class="ti ${it.g ? 'g' : ''} ${i === ci ? 'cur' : ''} ${i < ci ? 'past' : ''}">
+        <div class="tm">${showT(it)}</div><span class="dot"></span>
+        <div class="tb ${it.v && !it.g ? 'vtb ' + it.v : ''}">
+          <div class="tn">${it.title}</div>
+          ${it.desc ? `<div class="td">${it.desc}</div>` : ''}${it.html || ''}
+          ${it.g ? `<span class="gtag">집결 · 늦지 않기!</span>` : ''}
+        </div></div>`).join('')}</div>
+    <p class="foot">※ 일정은 날씨나 현지 사정에 따라 바뀔 수 있어요.<br>몸이 이상하거나 다치면 바로 선생님께 말해요.</p>`;
+}
+
+function openPicker(){
+  let c = CLS, a = ACT;
+  const m = $('#modal');
+  const draw = () => {
+    m.innerHTML = `<div class="sheet"><h3>반과 선택활동을 골라요</h3><p style="margin:0;color:var(--sub);font-size:13px">우리 반 버스 시간과 내 활동 일정을 보여줄게요.</p>
+      <h4>3학년 몇 반?</h4><div class="cg">${[1,2,3,4,5,6,7].map(x => `<button class="pick ${x === c ? 'on' : ''}" data-c="${x}"><b>${x}</b><small>반</small></button>`).join('')}</div>
+      <h4>내 선택활동</h4><div class="ag">
+        <button class="pick S ${a === 'S' ? 'on' : ''}" data-a="S"><b>스포츠몬스터</b></button>
+        <button class="pick A ${a === 'A' ? 'on' : ''}" data-a="A"><b>엑스포 아쿠아리움</b></button></div>
+      <button class="go" data-go="1" ${c && a ? '' : 'disabled'}>일정 보기</button></div>`;
+  };
+  draw(); m.classList.remove('hidden');
+  m.onclick = e => {
+    const bc = e.target.closest('[data-c]'), ba = e.target.closest('[data-a]'), go = e.target.closest('[data-go]');
+    if (bc) { c = +bc.dataset.c; draw(); }
+    else if (ba) { a = ba.dataset.a; draw(); }
+    else if (go && c && a) { CLS = c; ACT = a; LS.set('cls', c); LS.set('act', a); m.classList.add('hidden'); render(); window.scrollTo(0, 0); }
+    else if (e.target === m && CLS && ACT) m.classList.add('hidden');
+  };
+}
+
+$('#hd').addEventListener('click', e => { if (e.target.closest('[data-open]')) openPicker(); });
+$('#main').addEventListener('click', e => {
+  const t = e.target.closest('[data-tab]');
+  if (t) { TAB = t.dataset.tab; LS.set('tab', TAB); $('#main').innerHTML = ''; render(); window.scrollTo(0, 0); return; }
+  const z = e.target.closest('[data-zoom]'); if (z) openZoom(z.getAttribute('src'));
+});
+render();
+if (!CLS || !ACT) openPicker();
+setInterval(() => { if (!document.hidden && $('#modal').classList.contains('hidden')) render(); }, 30000);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) render(); });
+</script>
+</body>
+</html>
